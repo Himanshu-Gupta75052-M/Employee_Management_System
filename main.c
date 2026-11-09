@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include <ctype.h>
 
 #define file "employees.dat"
-#define MAX_NAME 50
-#define MAX_DEPT 50
+#define NAME 50
+#define DEPT 50
 
 struct Employee {
     int id;
-    char name[MAX_NAME];
-    char dept[MAX_DEPT];
+    char name[NAME];
+    char dept[DEPT];
     float salary;
 };
 
@@ -90,11 +89,11 @@ void addEmployee() {
     printf("Employee ID (auto): %d\n", emp.id);
 
     printf("Enter Name: ");
-    fgets(emp.name, MAX_NAME, stdin);
+    fgets(emp.name, NAME, stdin);
     emp.name[strcspn(emp.name, "\n")] = 0;
 
     printf("Enter Department: ");
-    fgets(emp.dept, MAX_DEPT, stdin);
+    fgets(emp.dept, DEPT, stdin);
     emp.dept[strcspn(emp.dept, "\n")] = 0;
 
     printf("Enter Salary: ");
@@ -167,11 +166,11 @@ void searchById() {
 }
 
 void searchByName() {                  // case-insensitive
-    char name[MAX_NAME];
+    char name[NAME];
     int found = 0;
 
     printf("\nEnter Name to search: ");
-    fgets(name, MAX_NAME, stdin);
+    fgets(name, NAME, stdin);
     name[strcspn(name, "\n")] = 0;
 
     FILE *fp = fopen(file, "rb");
@@ -218,11 +217,11 @@ void updateEmployee() {
             printf("Salary     : %.2f\n", emp.salary);
 
             printf("\nEnter New Name: ");
-            fgets(emp.name, MAX_NAME, stdin);
+            fgets(emp.name, NAME, stdin);
             emp.name[strcspn(emp.name, "\n")] = 0;
 
             printf("Enter New Department: ");
-            fgets(emp.dept, MAX_DEPT, stdin);
+            fgets(emp.dept, DEPT, stdin);
             emp.dept[strcspn(emp.dept, "\n")] = 0;
 
             printf("Enter New Salary: ");
