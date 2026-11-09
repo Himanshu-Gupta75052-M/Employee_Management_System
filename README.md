@@ -123,6 +123,7 @@ gcc main.c -o employee_management
 - Simple and intuitive menu-driven interface
 - Permanent binary file storage (no external database required)
 - Fast search by both ID and Name
+- Case insensitive
 - Lightweight and efficient
 
 ## ⚠️ Limitations

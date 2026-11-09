@@ -13,15 +13,16 @@ struct Employee {
     float salary;
 };
 
-// Function prototypes
+
 void addEmployee();
+void menu();
 void displayAll();
 void searchById();
 void searchByName();
 void updateEmployee();
 void deleteEmployee();
-void menu();
 int getNextId();
+
 
 int main() {
     menu();
@@ -34,17 +35,17 @@ void menu() {
         printf("\n\n=================================================================================\n");
         printf("                          EMPLOYEE MANAGEMENT SYSTEM\n");
         printf("=================================================================================\n");
-        printf("	1. Add Employee\t\t\t");
-        printf("2. Display All Employees\n");
-        printf("	3. Search by Employee ID\t");
-        printf("4. Search by Name\n");
-        printf("	5. Update Employee\t\t");
-        printf("6. Delete Employee\n");
-        printf("	7. Exit\n");
+        printf("	1. Add Employee\t\t\t");        // 1
+        printf("2. Display All Employees\n");       // 2
+        printf("	3. Search by Employee ID\t");   // 3
+        printf("4. Search by Name\n");              // 4
+        printf("	5. Update Employee\t\t");       // 5
+        printf("6. Delete Employee\n");             // 6
+        printf("	7. Exit\n");                    // 7
         printf("---------------------------------------------------------------------------------\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        getchar(); // clear newline
+        getchar();
 
         switch (choice) {
             case 1: addEmployee(); break;
